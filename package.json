@@ -1,6 +1,7 @@
 {
   "name": "vendas",
   "version": "0.0.0",
+  "engine": { "node": "10.16.3", "npm": "6.9.0" },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
