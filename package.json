@@ -4,7 +4,7 @@
   "engine": { "node": "10.16.3", "npm": "6.9.0" },
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
