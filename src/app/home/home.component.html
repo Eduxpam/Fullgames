@@ -1,0 +1,32 @@
+<app-header></app-header>
+
+<div class="container">
+  <div class="row" >
+    <div class="col-sm-2" style="background-color: white; margin-top: 10px;">
+      <div class="list-group">
+        <a *ngFor="let item of menu; let i = index" href="#" [class]="menuclass[i]" (click)="trocaCategoria(i)">{{item.nome}}</a>
+      </div>
+    </div>
+    <div class="col-sm-10" *ngIf="loading" style="text-align: center; margin-top: 30px;">
+      <img src="assets/spinner.gif">
+    </div>
+    <div class="col-sm-10" *ngIf="!loading">
+      <div *ngIf="produtos.length == 0" style="text-align: center; margin-top: 30px;">
+        <h3>Não há produtos na categoria selecionada.</h3>
+      </div>
+      <div class="row" *ngIf="produtos.length > 0">
+        <div *ngFor="let item of produtos" class="card" style="width: 18rem; margin: 10px 10px 10px 10px">
+          <img [src]="item.img" class="card-img-top" alt="descri" width="80px" height="120px" style="padding: 15px;">
+          <div class="card-body">
+            <h5 class="card-title">{{item.descri}}  {{item.preco}}</h5>
+            <!-- <p class="card-text">{{item.preco}}</p> -->
+            <p class="card-text">Descrição, preço ou alguma info</p>
+            <a href="#" class="btn btn-primary">Carrinho</a>
+
+            <a href="#" class="btn btn-success" style="float: right;">Comprar</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
